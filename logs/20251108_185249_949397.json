@@ -1,0 +1,48 @@
+{
+  "timestamp": "2025-11-08T18:52:49.949397",
+  "agent_type": "tutor",
+  "user_query": "explain kerberos",
+  "retrieval_info": {
+    "total_chunks_retrieved": 4,
+    "sources": [
+      "data/pdfs\\Lecture 23_slides.pdf",
+      "data/pdfs\\Lecture 21_slides.pdf"
+    ],
+    "chunks": [
+      {
+        "chunk_id": 0,
+        "source": "data/pdfs\\Lecture 23_slides.pdf",
+        "page": 4,
+        "content_preview": "Overview of Kerberos",
+        "content_length": 20
+      },
+      {
+        "chunk_id": 1,
+        "source": "data/pdfs\\Lecture 21_slides.pdf",
+        "page": 4,
+        "content_preview": "Kerberos4.3",
+        "content_length": 11
+      },
+      {
+        "chunk_id": 2,
+        "source": "data/pdfs\\Lecture 21_slides.pdf",
+        "page": 9,
+        "content_preview": "Kerberos•a centralized authentication server provides mutual authentication between users and servers•a key distribution and user authentication service developed at MIT•works in an open distributed e...",
+        "content_length": 313
+      },
+      {
+        "chunk_id": 3,
+        "source": "data/pdfs\\Lecture 23_slides.pdf",
+        "page": 5,
+        "content_preview": "Important Ideas in Kerberos•Short-term session keys •Long-term secrets used only to derive short-term keys •Separate session key for each user-server pair•Re-used by multiple sessions between same use...",
+        "content_length": 586
+      }
+    ]
+  },
+  "llm_info": {
+    "context_sent": 4,
+    "total_context_length": 930,
+    "response_length": 2856
+  },
+  "bot_response_preview": "Kerberos is a powerful **network authentication protocol** that provides **strong, mutual authentication** for client/server applications in an open, distributed environment. Developed at MIT, it functions as a **centralized authentication server**.\n\nIts main goals are to:\n\n*   **Secure Authentication:** Allow both the client (user) and the server to verify each other's identity securely over an insecure network.\n*   **Single Sign-On (SSO):** Users authenticate once to Kerberos and then receive ..."
+}

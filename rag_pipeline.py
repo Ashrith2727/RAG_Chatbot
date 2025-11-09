@@ -5,8 +5,6 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
-
-# Paths
 PDF_DIR = "data/pdfs"
 DB_DIR = "data/chroma_db"
 
@@ -22,8 +20,7 @@ def ingest_pdfs():
             documents.extend(docs)
 
     vectordb = Chroma.from_documents(documents, embedding=embeddings, persist_directory=DB_DIR)
-    #vectordb.persist()
-    print("✅ PDF data ingested successfully!")
+    print("PDF data ingested successfully!")
     return vectordb
 
 
