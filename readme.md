@@ -84,12 +84,6 @@ The system combines local document retrieval with cloud-based LLM inference to p
 
 ---
 
-## 🎥 Video Demonstration
-
-[Project Demo Video Link - To be added]
-
----
-
 ## ⚙️ Prerequisites
 
 ### System Requirements
