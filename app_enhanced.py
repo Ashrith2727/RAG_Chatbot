@@ -36,3 +36,29 @@ def chat():
 
     return jsonify({'response': response})
 
+def validate_security_query(query):
+    """Validate if the query is related to network security topics"""
+    security_keywords = ['encryption', 'firewall', 'vpn', 'ssl', 'tls', 'authentication', 
+                        'authorization', 'cryptography', 'hash', 'security', 'attack']
+    query_lower = query.lower()
+    return any(keyword in query_lower for keyword in security_keywords)
+
+
+def format_quiz_results(quiz_data, user_answers):
+    """Format quiz results with score calculation"""
+    total_questions = len(quiz_data)
+    correct_answers = 0
+    
+    for i, question in enumerate(quiz_data):
+        if user_answers.get(i) == question.get('correct_answer'):
+            correct_answers += 1
+    
+    score_percentage = (correct_answers / total_questions) * 100
+    
+    return {
+        'total': total_questions,
+        'correct': correct_answers,
+        'score': score_percentage,
+        'passed': score_percentage >= 70
+    }
+
