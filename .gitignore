@@ -27,8 +27,6 @@ ENV/
 .venv
 
 # Logs
-logs/
-*.log
 
 # Chat History
 chat_history_*.json
