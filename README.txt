@@ -94,7 +94,8 @@ PROJECT STRUCTURE
 -----------------
 CS5342-Security-Tutor-Bot-Group7/
 ├── app.py                      # Main Streamlit application
-├── app_enhanced.py             # Alternative UI without emojis
+├── app_enhanced.py             # Alternative UI
+├── securebot_experimental.py   # Experimental features (not used)
 ├── chat_utils.py               # Core chat logic and LLM integration
 ├── tutor_agent.py              # Tutor agent interface
 ├── quiz_agent.py               # Quiz generation interface
