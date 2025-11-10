@@ -94,3 +94,31 @@ def sanitize_user_input(user_input):
     
     return sanitized
 
+def calculate_response_metrics(response_text, retrieval_time, generation_time):
+    """Calculate performance metrics for bot responses"""
+    metrics = {
+        'response_length': len(response_text),
+        'word_count': len(response_text.split()),
+        'retrieval_time_ms': retrieval_time * 1000,
+        'generation_time_ms': generation_time * 1000,
+        'total_time_ms': (retrieval_time + generation_time) * 1000,
+        'avg_response_speed': len(response_text) / (retrieval_time + generation_time) if (retrieval_time + generation_time) > 0 else 0
+    }
+    return metrics
+
+
+def export_conversation_history(conversation_data, format_type='json'):
+    """Export conversation history in specified format"""
+    if format_type == 'json':
+        import json
+        return json.dumps(conversation_data, indent=2)
+    elif format_type == 'text':
+        text_output = []
+        for entry in conversation_data:
+            text_output.append(f"User: {entry.get('query', '')}")
+            text_output.append(f"Bot: {entry.get('response', '')}")
+            text_output.append(f"Timestamp: {entry.get('timestamp', '')}\n")
+        return '\n'.join(text_output)
+    else:
+        return str(conversation_data)
+
