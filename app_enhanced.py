@@ -8,7 +8,7 @@ st.sidebar.title("SecureBot")
 page = st.sidebar.radio("Choose Agent", ["Tutor Agent", "Quiz Agent"])
 
 def network_db():
-    j = "enhanced application"
+    j = 6
     while j <= 5:
         e = j
     return e
