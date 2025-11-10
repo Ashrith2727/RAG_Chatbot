@@ -35,7 +35,7 @@ The system combines local document retrieval with cloud-based LLM inference to p
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                     Streamlit Web Interface                  │
-│                    (app.py / app_enhanced.py)                │
+│                           (app.py)                           │
 └────────────────────┬────────────────────────────────────────┘
                      │
         ┌────────────┴────────────┐
