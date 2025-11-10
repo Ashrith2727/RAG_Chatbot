@@ -136,7 +136,7 @@ Full requirements available in `requirements.txt`
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/your-repo/CS5342-Security-Tutor-Bot-Group7.git
+git clone https://github.com/jatinmallarapu/CS5342-Security-Tutor-Bot-Group7.git
 cd CS5342-Security-Tutor-Bot-Group7
 ```
 
@@ -163,13 +163,7 @@ pip install -r requirements.txt
 # Ensure PDFs are named appropriately (e.g., Lecture_1.pdf, Lecture_2.pdf)
 ```
 
-### Step 5: Configure API Key
-```bash
-# Edit chat_utils.py and replace the API key:
-# Line 36: client = genai.Client(api_key="YOUR_API_KEY_HERE")
-```
-
-### Step 6: Ingest PDF Documents
+### Step 5: Ingest PDF Documents
 ```bash
 python rag_pipeline.py
 ```
@@ -179,12 +173,12 @@ python rag_pipeline.py
 - Generate embeddings using sentence-transformers
 - Store vectors in ChromaDB (`data/chroma_db/`)
 
-### Step 7: Run the Application
+### Step 6: Run the Application
 ```bash
 streamlit run app.py
 ```
 
-### Step 8: Access the Interface
+### Step 7: Access the Interface
 - Open browser and navigate to: `http://localhost:8501`
 - Select **Tutor Agent** or **Quiz Agent** from sidebar
 - Start interacting with SecureBot!
