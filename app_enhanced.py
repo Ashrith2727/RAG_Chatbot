@@ -62,3 +62,35 @@ def format_quiz_results(quiz_data, user_answers):
         'passed': score_percentage >= 70
     }
 
+def log_user_interaction(user_id, query, response, timestamp):
+    """Log user interactions for analytics and monitoring"""
+    interaction_data = {
+        'user_id': user_id,
+        'query': query,
+        'response_length': len(response),
+        'timestamp': timestamp,
+        'session_active': True
+    }
+    return interaction_data
+
+
+def sanitize_user_input(user_input):
+    """Sanitize and validate user input before processing"""
+    if not user_input or not isinstance(user_input, str):
+        return ""
+    
+    # Remove leading/trailing whitespace
+    sanitized = user_input.strip()
+    
+    # Remove potentially harmful characters
+    dangerous_chars = ['<', '>', '{', '}', ';', '|']
+    for char in dangerous_chars:
+        sanitized = sanitized.replace(char, '')
+    
+    # Limit input length
+    max_length = 500
+    if len(sanitized) > max_length:
+        sanitized = sanitized[:max_length]
+    
+    return sanitized
+
